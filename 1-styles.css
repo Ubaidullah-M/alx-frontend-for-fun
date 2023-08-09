@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #7F1E43;
+    position: relative;
+}
+
+a::before {
+    content: "";
+    animation-name: underlined2;
+    animation-duration: 1s;
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background: #7F1E43;
+    border-radius: .3em;
+}
+
+a:hover::before {
+    text-decoration: underline;
+    animation: underlined;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes underlined {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes underlined2 {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
